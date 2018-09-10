@@ -1,0 +1,10 @@
+<pre id="console">
+</pre>
+<script src="/socket.io/socket.io.js"></script>
+	<script>
+	var socket = io.connect('http://localhost:3000');
+  socket.on('message', function (data) {
+		console.log(data);
+		document.getElementById('console').innerHTML += data + "\n";
+  }); 
+	</script>
